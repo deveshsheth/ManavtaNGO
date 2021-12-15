@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ngo.AddHospitalNGOActivity"
+    android:background="#134F5C"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+
+            android:layout_centerInParent="true"
+            android:background="@drawable/ngo_inner_layout">
+
+            <TextView
+                android:id="@+id/tv_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="25dp"
+                android:fontFamily="@font/source_sans"
+                android:text="Add Hospital"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/edt_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_register"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/hospitalname"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_line"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="25dp"
+                android:hint="Hospital Name ">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_hospitalname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:layout_below="@id/in_email"
+                    android:fontFamily="@font/source_sans"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/numberofbeds"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hospitalname"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:hint="Number of Beds">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_numberofbeds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:layout_below="@id/hospitalname"
+                    android:fontFamily="@font/source_sans"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/hospitalphno"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/numberofbeds"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:hint="Phone number">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_hospitalphno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:layout_below="@id/numberofbeds"
+                    android:fontFamily="@font/source_sans"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/address"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/hospitalphno"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:hint="Address">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:padding="15dp"
+                    android:layout_below="@id/hospitalphno"
+                    android:fontFamily="@font/source_sans"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pincode"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:hint="Pincode">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address"
+                    android:padding="15dp"
+                    android:fontFamily="@font/source_sans"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <android.widget.Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pincode"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/ngo_app_btn_sign_up"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="#B8B1B1"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
